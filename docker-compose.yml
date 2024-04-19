@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  authentic_shoes:
+    container_name: authentic_shoes
+    build: 
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        PHP_VERSION: '8.3.4-fpm-bullseye'
+    # volumes:
+    #   ./App:/var/www/app
+    ports:
+      - "8001:8000"
+      # - "433:433"
